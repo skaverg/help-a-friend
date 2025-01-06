@@ -1,0 +1,33 @@
+<app-header [showHomeLink]="true" [title]="'- Github Repositories for ' + this.userName + ' (' + this.userType + ')'" />
+
+<section class="container" appScrollable (triggerReached)="onScrollLoad()">
+  @for (repo of userRepos; track repo.id) {
+  <article class="card">
+    <header>
+      <h1><a href={{repo.html_url}}>{{ repo.name }}</a></h1>
+      <aside>
+        <h3>
+          <mat-icon fontIcon="star"></mat-icon>
+          {{repo.stargazers_count || 0}}
+        </h3>
+        <h3>
+          <mat-icon fontIcon="fork_right"></mat-icon>
+          {{repo.fork_count || 0}}
+        </h3>
+        <h3>
+          <mat-icon fontIcon="bug_report"></mat-icon>
+          {{repo.open_issues_count || 0}}
+        </h3>
+      </aside>
+    </header>
+    <section class="detail">
+      <h4>Language: {{repo.language || "Unknown"}}</h4>
+
+      <p>Description: {{repo.description || "None"}}</p>
+    </section>
+  </article>
+  }
+  @if (loading) {
+  <app-footer class="section-footer" />
+  }
+</section>

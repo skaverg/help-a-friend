@@ -1,0 +1,43 @@
+.container {
+  flex-direction: column;
+
+  .card {
+    flex: 1;
+    flex-direction: column;
+
+    header {
+      background-color: #3e067f;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      padding: 0 16px;
+
+      h1 {
+        flex: 1;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      aside {
+        color: #fde4ff;
+        display: flex;
+
+        h3 {
+          align-items: center;
+          display: flex;
+          padding-right: 8px;
+        }
+      }
+    }
+
+    h4,
+    p {
+      margin: 4px 0;
+    }
+
+    .detail {
+      padding: 8px 16px;
+    }
+  }
+}

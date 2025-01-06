@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #f1f1f1;
+}
+
+.section-footer {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.container {
+  display: flex;
+  padding: 16px;
+  margin-top: 80px;
+  overflow-y: auto;
+  height: -webkit-fill-available;
+
+  .card {
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    margin: 20px;
+  }
+}

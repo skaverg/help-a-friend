@@ -1,0 +1,32 @@
+<app-header [title]="' - Github Users'" />
+
+<section class="container" appScrollable (triggerReached)="onScrollLoad()">
+  @for (user of userDetails; track user.id) {
+  <article class="card" (click)="onCardClick(user)">
+    <aside>
+      <img src={{user.avatar_url}} />
+    </aside>
+    <section class="detail">
+      <header class="detail-header">
+        <h2>{{user.name}}</h2>
+        <section>
+          <h3>
+            <mat-icon fontIcon="source"></mat-icon>
+            {{user.public_repos || 0}}
+          </h3>
+          <h3>
+            <mat-icon fontIcon="people"></mat-icon>
+            {{user.followers || 0}}
+          </h3>
+        </section>
+      </header>
+      <h3>{{user.login}}</h3>
+      <h4>{{user.location || "Unknown"}}</h4>
+      <p>{{user.email || "Unavailable"}}</p>
+    </section>
+  </article>
+  }
+  @if (loading) {
+  <app-footer class="section-footer" />
+  }
+</section>

@@ -1,0 +1,29 @@
+  .header-row {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    padding: 4px;
+    background: #241c3a;
+    color: #fff;
+    z-index: 10;
+
+    .main-heading {
+      display: flex;
+      flex: 1;
+
+      .logo {
+        align-self: center;
+        padding: 0 16px;
+      }
+    }
+
+    a {
+      color: #fff;
+      align-self: center;
+      padding: 0 16px;
+    }
+  }

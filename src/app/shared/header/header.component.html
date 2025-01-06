@@ -1,0 +1,9 @@
+<mat-toolbar-row class="header-row">
+    <section class="main-heading">
+        <mat-icon class="mat-icon-rtl-mirror logo" fontIcon="diversity_2"></mat-icon>
+        <h2>Help a Friend {{ title() }}</h2>
+    </section>
+    @if (showHomeLink()) {
+    <a href="/"><mat-icon fontIcon="home"></mat-icon></a>
+    }
+</mat-toolbar-row>
